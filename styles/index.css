@@ -1,0 +1,54 @@
+@keyframes backgroundAnimation {
+  0% {
+    background-image: linear-gradient(
+      30deg,
+      #6b6bff,
+      #ffffff,
+      #f7e6ff,
+      #e6f7ff
+    );
+  }
+  50% {
+    background-image: linear-gradient(
+      30deg,
+      #ffffff,
+      #e6f7ff,
+      #6b6bff,
+      #f7e6ff
+    );
+  }
+  100% {
+    background-image: linear-gradient(
+      30deg,
+      #6b6bff,
+      #ffffff,
+      #f7e6ff,
+      #e6f7ff
+    );
+  }
+}
+
+body {
+  background-image: linear-gradient(30deg, #6b6bff, #ffffff, #f7e6ff, #e6f7ff);
+  background-size: 300% 300%;
+  animation: backgroundAnimation 7s ease infinite;
+  height: 100vh;
+  margin: 0;
+  transition: background-image 1s ease-in-out;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fade-in 1s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
